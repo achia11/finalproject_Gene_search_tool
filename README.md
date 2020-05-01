@@ -10,7 +10,7 @@ For simplicity of the mining tool, the output is customized to displaying only t
 
 The search term is parsed through a CGI script to send the term back to the customized database, and javascript/JQuery is used to create the output of results through the AJAX call, and finally displayed in a table in HTML. An option to download the search results is provided to perform further filtering through Excel. 
 
-<br><b>*DETAILED USAGE*</b></br>
+<b>*DETAILED USAGE*</b>
 1. Enter a search term (e.g receptor) into the search box. 
 2. Each gene description that matches the search term is added row by row to the table. 
 3. The full table is displayed on the same webpage, with each Ensembl ID hyperlinked to the Ensembl website for additional information for the gene. 
