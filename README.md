@@ -1,12 +1,24 @@
-410.712.81 Final Project
+<h1>Human gene search tool</h1>
 
-The purpose of this project is to create a simple search tool, through data mining, where user is allowed to search for a specific term, and have results returned. For this project, I’ll be using a database called the human protein atlas (https://www.proteinatlas.org), where I’ll be performing a similar search function to parse out the information related to the search term entered by user. 
+<br><b>*ABOUT*</b></br>
+Web interface for a simple data mining tool from an external source, and outputs results by searching on a term found within gene description. Created for the final project for 410.712.81 Advanced Practical Computer Concepts for Bioinformatics
 
-The main interface would be through a simple HTML form, to enter the search term. It’ll then return results for the total count of genes related to that term, and its name (possibly including molecular function, or Ensembl gene ID). Ideally, the user will be able to search out genes with a specific term, and further research can be completed through the Ensembl ID. In the webpage, I would also include a link to Ensembl.
+<br><b>*BACKGROUND*</b></br>
+The purpose of this project is to create a simple search tool, through data mining. Output is based on user's choice of search term, and term is search through the gene description of the database. Source is obtained from a database called the human protein atlas (https://www.proteinatlas.org). This database provides an extensive list of genes found within the human genome, together with additional information such as Ensembl ID, the type of protein classes each gene is associated to, the position found within the chromosome, and many more. 
 
-Files downloadable for the database are in JSON, TSV, and RDF format (https://www.proteinatlas.org/about/download), and I’ll be using JSON format to store the data into MySQL. The storing of the database on MySQL can be performed through importing of the JSON python library, with enumerating each gene, and inserting it into the database itself. 
+For simplicity of the mining tool, the output is customized to displaying only the gene ID, Ensembl ID, and gene description, and protein classes. Database is downloaded in the JSON format, and with each gene and its associated data uploaded to MySQL. 
 
-As the database is rather large, I’ll like to attempt with only inserting values that the results would show. For example, if the user searched “TLR3”, it’ll return 3 columns with TLR3 as the gene name, the next column with its name, and a following column showing the Ensembl ID (if present). That means, I’ll only be inserting gene ID, gene name, and Ensembl ID into MySQL database.
+The search term is parsed through a CGI script to send the term back to the customized database, and javascript/JQuery is used to create the output of results through the AJAX call, and finally displayed in a table in HTML. An option to download the search results is provided to perform further filtering through Excel. 
 
-From which, the search term will be parsed through a CGI script and queried through MySQL database, and return the results into the same website. Formatting of the webpage will be handled through CSS, and backend scripting will be through javascript. Within the Javascript, it’ll have AJAX, and likely adding autocomplete JQuery function as well. 
+<br><b>*DETAILED USAGE*</b></br>
+1. Enter a search term (e.g receptor) into the search box. 
+2. Each gene description that matches the search term is added row by row to the table. 
+3. The full table is displayed on the same webpage, with each Ensembl ID hyperlinked to the Ensembl website for additional information for the gene. 
+4. Optional to have the results table exported in .xls format, and Ensembl links are included with the export.
+
+<br><b>*SOURCE OF DATABASE*</b></br>
+https://www.proteinatlas.org/download/proteinatlas.json.gz
+
+<br><b>*DEMO OF WEBSITE*</b></br>
+http://bfx3.aap.jhu.edu/achia2/final/proteinatlas.html
 
