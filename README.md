@@ -11,7 +11,7 @@ For simplicity of the mining tool, the output is customized to displaying only t
 The search term is parsed through a CGI script to send the term back to the customized database, and javascript/JQuery is used to create the output of results through the AJAX call, and finally displayed in a table in HTML. An option to download the search results (plugin by table2excel) is provided to perform further filtering through Excel. 
 
 <b>*DETAILED USAGE*</b>
-These steps can only be done after the data have been uploaded to MySQL.
+<br>These steps can only be done after the data have been uploaded to MySQL.</br>
 1. Select to search via gene description or protein class type.
 2. Enter a search term (e.g receptor, or FDA approved drug target) into the search box. 
 3. Each gene description, or protein class that matches the search term is added row by row to the table. 
