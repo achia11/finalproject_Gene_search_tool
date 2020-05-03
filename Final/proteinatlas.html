@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Human Gene Search</title>
+    <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <link rel="stylesheet" type="text/css" href="css/proteinatlas.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/proteinatlas.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.table2excel.js"></script>
+
+</head>
+
+<body id="main">
+
+    <h1>Human Gene Search</h1>
+
+    <p>
+        This search displays all genes that matches your search term within either the gene description or protein class.
+    </p>
+
+    <p>
+        Select an option below, and enter a search term.
+    </p>
+
+    <form name="gene_search" id="gene_search" action="">
+        <input type="radio" name="searchqry" value="gene_term"/> Gene description
+        <input type="radio" name="searchqry" value="protein_term"/> Protein class
+        <input name="search_term" type="search" value="" autofocus=autofocus id="auto_term" placeholder="Enter a search term"/>
+        <input name="submit" type="submit" id="submit" value="submit">
+    </form>
+
+    <section id='results'>
+        <p>
+            <span id='match_count'>0</span> match(es) found.
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <td>Gene name</td>
+                <td>Ensembl ID</td>
+                <td>Gene Description</td>
+                <td>Protein Class</td>
+            </tr>
+            </thead>
+            <tbody>
+                <!-- this will be filled in by javascript when there are results -->
+            </tbody>
+    </section>
+
+    <button id="exportdata">Export Data!</button>
+
+</body>
+
+</html>
