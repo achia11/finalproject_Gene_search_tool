@@ -8,7 +8,7 @@ The purpose of this project is to create a simple search tool, through data mini
 
 For simplicity of the mining tool, the output is customized to displaying only the gene ID, Ensembl ID, and gene description, and protein classes. Database is downloaded in the JSON format, and with each gene and its associated data uploaded to MySQL. 
 
-The search term is parsed through a CGI script to send the term back to the customized database, and javascript/JQuery is used to create the output of results through the AJAX call, and finally displayed in a table in HTML. An option to download the search results is provided to perform further filtering through Excel. 
+The search term is parsed through a CGI script to send the term back to the customized database, and javascript/JQuery is used to create the output of results through the AJAX call, and finally displayed in a table in HTML. An option to download the search results (plugin by table2excel) is provided to perform further filtering through Excel. 
 
 <b>*DETAILED USAGE*</b>
 1. Select to search via gene description or protein class type.
